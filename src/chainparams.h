@@ -102,6 +102,7 @@ public:
     int64_t StartMasternodePayments() const { return nStartMasternodePayments; }
     int64_t Budget_Fee_Confirmations() const { return nBudget_Fee_Confirmations; }
 	std::string vTreasuryRewardAddress;
+	std::string vTreasuryRewardAddress2;
     std::string GetTreasuryRewardAddressAtHeight(int height) const;
     CScript GetTreasuryRewardScriptAtHeight(int height) const;
 
@@ -138,6 +139,7 @@ public:
     CAmount InvalidAmountFiltered() const { return nInvalidAmountFiltered; };
 	
 	std::string DevAddress() const { return devAddress; }
+    std::string DevAddress2() const { return devAddress2; }
 
 protected:
     CChainParams() {}
@@ -205,6 +207,7 @@ protected:
     int nBlockDoubleAccumulated;
 	
 	std::string devAddress;
+    std::string devAddress2;
 
     // fake serial attack
     int nFakeSerialBlockheightEnd = 0;
